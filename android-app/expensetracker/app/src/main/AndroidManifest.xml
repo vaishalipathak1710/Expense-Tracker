@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.expensetracker">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:label="ExpenseTracker"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        <!-- Add Expense Screen -->
+        <activity android:name=".activities.AddExpenseActivity" />
+
+        <!-- Dashboard Screen -->
+        <activity android:name=".activities.DashboardActivity" />
+
+        <activity android:name=".activities.UpdateExpenseActivity"/>
+
+        <!-- Login Screen (Launcher Activity) -->
+        <activity android:name=".activities.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>
